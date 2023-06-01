@@ -7,7 +7,7 @@ def get_Ahp(P, beta=0.5):
     v = (np.absolute(v) / linalg.norm(v, 1))
     vt = np.transpose(v)
     
-    #Constructs the symmetric adjacenncy matrix M
+    #Constructs the symmetric adjacency matrix M
     if beta == 0.5:
         Aht = scipy.sparse.spdiags(vt ** 0.5, diags=0, m=n, n=n) @ Q @ scipy.sparse.spdiags(vt ** (-0.5), diags=0, m=n, n=n)
     elif beta == 1:
