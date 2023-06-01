@@ -1,0 +1,66 @@
+
+# create a graph with two cycles glued along a path
+tt = 60 # numpber of vertices in each cycle
+m = 5 # number of shared vertices
+n = 2 * tt - m # total number of vertices
+P = np.zeros((n, n))
+
+#fill first cycle
+for ii in range(0, tt-1):
+    P[ii, ii + 1] = 1
+
+# last vertex in the first cycle splits
+P[tt - 1, 0] = 0.5
+P[tt - 1, tt] = 0.5
+
+# second cycle
+for ii in range(tt, n - 1):
+    P[ii, ii + 1] = 1
+    
+# last vertex of second cycle joins back to the tt-m+1 vertex
+P[n - 1, tt - m] = 1
+
+#make this matrix into a graph to better visualize the network
+pgraph = Graph.Adjacency(P, mode="directed")
+
+# compute extended effective resistance on P
+R = extEffRes(P)   
+R = np.sqrt(R)
+
+# compute the hitting probability matrix when beta=1/2
+d12 = -np.log(get_Ahp(P))
+for i in range(0, n):
+    d12[i, i] = 0
+
+# compute the hitting probability matrix when beta=1
+d1 = -np.log(get_Ahp(P, 1))
+for i in range(0, n):
+    d1[i, i] = 0
+assert (np.nanmax(((d1 - np.transpose(d1)) / d1)) < 0.001)
+r = np.rint((tt - m) / 2)
+
+# create an undirected tree graph as another geeometric set example
+tgraph = Graph.Tree(115,5)
+tmat = np.array(tgraph.get_adjacency().data)
+#normalize the data so that the rows each sum to 1; need to do this to 
+# correctly compute the Hitting Probability matrices and extended effective
+# resistance
+tmat = normalize(tmat, axis=1, norm='l1')
+
+# compute extended effective resistance on the tree graph
+R = extEffRes(tmat)   
+R = np.sqrt(R)
+
+# compute the hitting probability matrix when beta=1/2
+dt_12 = -np.log(get_Ahp(tmat))
+for i in range(0, 60):
+    dt_12[i, i] = 0
+    
+# compute the hitting probability matrix when beta=1
+dt_1 = -np.log(get_Ahp(tmat, 1))
+for i in range(0, 60):
+    dt_1[i, i] = 0
+assert (np.nanmax(((dt_1 - np.transpose(dt_1)) / dt_1)) < 0.001)
+
+ig.plot(pgraph, layout="fruchterman_reingold")
+ig.plot(tgraph)
