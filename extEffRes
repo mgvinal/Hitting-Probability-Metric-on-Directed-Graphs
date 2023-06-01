@@ -20,6 +20,4 @@ def extEffRes(A):
             r = X[ii, ii] + X[jj, jj] - 2 * X[ii, jj]
             R[ii, jj] = r
             R[jj, ii] = r
-    return R
-    
-    
+    return R 
