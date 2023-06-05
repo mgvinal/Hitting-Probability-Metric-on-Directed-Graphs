@@ -8,4 +8,11 @@ This code is the Python adaptation of the MATLAB code found in the paper ["A Met
 4. tree_ex: contains an example of a standard undirected tree graph. The extended effective resistance and hitting probabilities when beta=1 and 0.5 matrices are all computed and visualized via heatmaps. Additionally, a graph visualization of this tree is also generated. 
 5. two_cycles_ex: contains the example used in the original paper. This graph is directed and consists of two directed 60-node-length cycles, connected along 5 common nodes. This example also undergoes calculations of its extended effective resistance and hitting probabilities when beta=1 and 0.5 matrices. All of these matrices are visualized using a heatmap, and a graph visualization is also provided. 
 ### Included Figures:
-1. 
+1. 2_cycles.png: is the graph visualization for the two directed cycles. 
+2. tree.png: is the graph visualization for the tree. 
+3. d12_hm.png: shows the heatmap for the hitting probabilities when beta=0.5 for the two directed cycles graph. 
+4. d1_hm.png: shows the heatmap for the hitting probabilities when beta=1 for the two directed cycles graph. 
+5. d12t_hm.png: shows the heatmap for the hitting probabilities when beta=0.5 for the tree graph. 
+6. d1t_hm.png: shows the heatmap for the hitting probabilities when beta=1 for the tree graph. 
+7. exteffres2cyc.png: shows the heatmap for the extended effective resistance of the two directed cycles graph. 
+8. exteffrestree.png: shows the heatmap for the extended effective resistance of the tree graph. 
