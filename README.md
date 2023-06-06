@@ -16,3 +16,4 @@ This code is the Python adaptation of the MATLAB code found in the paper ["A Met
 6. [d1t_hm.png](https://github.com/mgvinal/Hitting-Probability-Metric-on-Directed-Graphs/blob/main/d1t_hm.png): shows the heatmap for the hitting probabilities when beta=1 for the tree graph. 
 7. [exteffres2cyc.png](https://github.com/mgvinal/Hitting-Probability-Metric-on-Directed-Graphs/blob/main/exteffres2cyc.png): shows the heatmap for the extended effective resistance of the two directed cycles graph. 
 8. [exteffrestree.png](https://github.com/mgvinal/Hitting-Probability-Metric-on-Directed-Graphs/blob/main/exteffrestree.png): shows the heatmap for the extended effective resistance of the tree graph. 
+## Funding Acknowledgment:
