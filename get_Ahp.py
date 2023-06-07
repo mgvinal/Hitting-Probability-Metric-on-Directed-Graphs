@@ -27,7 +27,7 @@ def get_Ahp(P, beta=0.5):
         v_arr = v.flatten(order="F")
         v_diag = np.diag(v_arr)
         Aht = v_diag @ Q
-        
+    # add an else statement for when beta doesn't equal 0.5 or 1 
     Aht = 0.5 * (Aht + np.transpose(Aht))
     Aht = Aht - np.diag(np.diag(Aht))
     return Aht
