@@ -22,4 +22,4 @@ This code is the Python adaptation of the MATLAB code found in the paper ["A Met
 7. [exteffres2cyc.png](https://github.com/mgvinal/Hitting-Probability-Metric-on-Directed-Graphs/blob/main/exteffres2cyc.png): shows the heatmap for the extended effective resistance of the two directed cycles graph. 
 8. [exteffrestree.png](https://github.com/mgvinal/Hitting-Probability-Metric-on-Directed-Graphs/blob/main/exteffrestree.png): shows the heatmap for the extended effective resistance of the tree graph. 
 ## Funding Acknowledgment:
-This project was supported by...
+This project was supported by the National Science Foundation's Focused Research Groups in the Mathematical Sciences (NSF FRG) [grant number DMS-2152289]. 
