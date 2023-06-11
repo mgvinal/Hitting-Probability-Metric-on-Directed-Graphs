@@ -1,14 +1,14 @@
 # Hitting-Probability-Metric-on-Directed-Graphs
 This code is the Python adaptation of the MATLAB code found in the paper ["A Metric on Directed Graphs and Markov Chains Based on Hitting Probabilities,"](https://marzuola.web.unc.edu/wp-content/uploads/sites/16865/2020/06/A_metric_on_the_state_space_of_Markov_chains_based_on_hitting_times.pdf) by Boyd, Fraiman, Marzuola, Mucha, Osting, and Weare. This paper addresses the fact that shortest path and extended effective resistance graph metrics have been applied to directed graphs in the same way as undirected graphs, and seeks to find an alternative metric that is more suited for directed graphs so that these graphs can be better analyzed. This new metric is based on any Markov Chain of a directed graph and uses random walkers to determine the hitting probability between any two nodes in a graph; that is, the probability that a random walker will move from one node to another before returning to the original node. In undirected graphs, this new metric is equal to the natural logarithm of the extended effective resistance divided by the commute time. 
 
-<img src="2_cycles.png" width="500" height="500">
-<img src="d12_hm.png" width="500" height="500">
-<img src="d1_hm.png" width="500" height="500">
-<img src="exteffres2cyc.png" width="500" height="500">
-<img src="tree.png" width="500" height="500">
-<img src="d12t_hm.png" width="500" height="500">
-<img src="d1t_hm.png" width="500" height="500">
-<img src="exteffrestree.png" width="500" height="500">
+<img src="2_cycles.png" width="250">
+<img src="d12_hm.png" width="250">
+<img src="d1_hm.png" width="250">
+<img src="exteffres2cyc.png" width="250">
+<img src="tree.png" width="250">
+<img src="d12t_hm.png" width="250">
+<img src="d1t_hm.png" width="250">
+<img src="exteffrestree.png" width="250">
 
 ## Description of Files: 
 ### Hitting Probability Metric on Directed Graphs includes 3 distinct functions with two examples.
