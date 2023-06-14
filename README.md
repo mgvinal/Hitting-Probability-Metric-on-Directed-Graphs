@@ -1,7 +1,7 @@
 # Hitting-Probability-Metric-on-Directed-Graphs
 This code is the Python adaptation of the MATLAB code found in the paper ["A Metric on Directed Graphs and Markov Chains Based on Hitting Probabilities,"](https://marzuola.web.unc.edu/wp-content/uploads/sites/16865/2020/06/A_metric_on_the_state_space_of_Markov_chains_based_on_hitting_times.pdf) published in SIAM J. Math. Data Sci. 3 (2021), no. 2, 467–493  by Boyd, Fraiman, Marzuola, Mucha, Osting, and Weare. This paper addresses the fact that the shortest path and generalized effective resistance graph metrics have been applied to directed graphs in the same way as undirected graphs without much consideration for the obvious differences between the two types. It comes up with a new metric, more suited to analyze directed graphs. The Hitting Probability Metric can be used on any strongly connected, directed graph. Possible applications for this metric include structure detection, dimension reduction, visualization, dynamics exploration, and multiscale cluster detection. Other applications involve nearest-neighbor search, new notions of graph curvature, Cheeger inequalities, and provable optimality of weak recovery for dense, directed communities. 
 
-<img src="figures/2_cycles.png" width="400"> <img src="figures/d12_hm.png" width="400"> <img src="figures/d1_hm.png" width="400"> <img src="figures/exteffres2cyc.png" width="400">
+<img src="figures/2_directed_cycles.png" width="400"> <img src="figures/d12_hm.png" width="400"> <img src="figures/d1_hm.png" width="400"> <img src="figures/exteffres2cyc.png" width="400">
 
 <img src="figures/tree.png" width="400"> <img src="figures/d12t_hm.png" width="400"> <img src="figures/d1t_hm.png" width="400"> <img src="figures/exteffrestree.png" width="400">
 
