@@ -218,7 +218,7 @@ plt.title("Hitting Probabilities B=1/2 for 2 Directed Cycles")
 plt.colorbar()
 plt.show()
 
-pgraph = nx.from_numpy_array(P, parallel_edges=False)
+pgraph = nx.DiGraph(incoming_graph_data=P)
 nx.draw_networkx(pgraph, nx.spectral_layout(pgraph), node_size=30, node_color = "blue", with_labels = False, width = 1)
 plt.title("2 Directed Cycles Graph")
 plt.show()
