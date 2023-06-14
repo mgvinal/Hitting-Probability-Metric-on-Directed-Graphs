@@ -201,7 +201,7 @@ r = np.rint((tt - m) / 2)
 
 # In[5]:
 
-
+# heatmaps for generalized effective resistance, hitting probability metric for beta=1 and 0.5, and visualization of this graph. 
 import matplotlib.pyplot as plt
 import networkx as nx
 
