@@ -3,6 +3,15 @@
 
 # In[1]:
 
+import numpy as np
+from numpy import linalg
+import scipy
+from scipy import linalg
+import igraph as ig
+from igraph import Graph
+from sklearn.preprocessing import normalize
+import matplotlib.pyplot as plt
+import networkx as nx
 
 def HittingTimes_L3(M):
     # this program is based on the paper "Sharp Entrywise Perturbation Bounds for Markov Chains"
@@ -12,8 +21,7 @@ def HittingTimes_L3(M):
     
     # M must be a stochastic matrix. If the desired input A is nonstochastic, row normalization should be used to make the input
     # matrix stochastic. Alternatively, a similarity transformation involving the dominant right eigenvector of A could be used. 
-    import numpy as np
-    from numpy import linalg
+    
     # all referenced equations are from the aforementioned paper
     
     # EQN 25
@@ -82,9 +90,7 @@ def get_Ahp(P, beta=0.5):
     # when the desired input is a nonstochastic adjacency matrix A, the matrix must first be transformed into the stochastic
     # matrix P by preferably normalizing all of the rows so they add up to one. Alternatively, one could conduct a similarity
     # transformation involving the dominant right eigenvector of A. 
-    import numpy as np
-    import scipy
-    from scipy import linalg
+    
     # Find the invariant measure Aht given the matrix of probabilities P found in HittingTimes_L3
     # this function is based on equation 1.3 in "A Metric on Directed Graphs and Markov Chains Based on Hitting Probabilities"
     Q = HittingTimes_L3(P)
@@ -127,9 +133,6 @@ def extEffRes(A):
     # Resistance for Directed Graphs-Part I: Definition and Properties". It is a symmetric matrix. 
     # all equations referenced in thie function are from the paper above
     # R itself is not a metric, we will want to use R^0.5 as the generalized effective resistance matrix
-    import numpy as np
-    import scipy
-    from scipy import linalg
     
     n = A.shape[0]
     d_out = A.sum(axis=1) # out degrees
@@ -161,9 +164,7 @@ def extEffRes(A):
 
 
 # create an undirected tree graph as another geeometric set example
-import igraph as ig
-from igraph import Graph
-from sklearn.preprocessing import normalize
+
 tgraph = Graph.Tree(115,5)
 tmat = np.array(tgraph.get_adjacency().data)
 #normalize the data so that the rows each sum to 1; need to do this to 
@@ -191,8 +192,6 @@ assert (np.nanmax(((dt_1 - np.transpose(dt_1)) / dt_1)) < 0.001)
 
 
 # heatmaps for generalized effective resistance, hitting probability metric for beta=1 and 0.5, and visualization of tree graph. 
-import matplotlib.pyplot as plt
-import networkx as nx
 
 plt.imshow(R_t, cmap='viridis', interpolation='nearest')
 plt.title("Extended Effective Resistance for a Tree")
